@@ -1,6 +1,6 @@
 const http = require('http');
 const fs = require('fs');
-const path = require('path')
+const path = require('path');
 
 
 const server = http.createServer((req, res) => {
@@ -22,7 +22,7 @@ const server = http.createServer((req, res) => {
         filePath = path.join(__dirname, 'pages', '404.html');
         statusCode = 404;
     }
-    
+ 
     fs.readFile(filePath, (err, content) => {
         if (err) {
           console.error(`Error reading file: ${err}`);
@@ -38,3 +38,4 @@ const server = http.createServer((req, res) => {
 server.listen(3000,() =>{
     console.log('Server is running on')
 })
+
